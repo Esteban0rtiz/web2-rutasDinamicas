@@ -8,7 +8,7 @@ node {
     }
 
     stage('Construir') {
-        sh 'npm run build'
+        bat 'npm run build'
     }
 
     
