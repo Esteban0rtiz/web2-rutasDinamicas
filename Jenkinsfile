@@ -4,11 +4,11 @@ node {
     }
 
     stage('Instalar Dependencias') {
-        bat 'npm install'
+         'npm install'
     }
 
     stage('Construir') {
-        bat 'npm run build'
+         'npm run build'
     }
 
     
