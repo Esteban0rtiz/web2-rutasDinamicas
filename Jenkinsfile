@@ -11,10 +11,13 @@ node {
          'npm run build'
     }
 
-    stage('Enviar Correo Electrónico') {
-        script {
-            // Agrega el comando para ejecutar tu script de Python aquí
-           'python script.py'
-        }
+   stage('Enviar Correo Electrónico') {
+    script {
+        // Ruta al script Python
+        def scriptPath = "send_email.py"
+
+        // Ejecutar el script Python
+         "python ${scriptPath}"
     }
+}
 }
