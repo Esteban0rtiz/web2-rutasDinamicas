@@ -20,4 +20,4 @@ def send_email(subject, body, to_email):
         print(f"Error al enviar el correo: {e}")
 
 # Ejemplo de uso
-send_email("Prueba de Jenkins", "Este es un correo de prueba con script python.", "ecuaplush010@gmail.com")
+send_email("Prueba de Jenkins", "Este es un correo de prueba con script python.", "ecuaplush2025@yopmail.com")
