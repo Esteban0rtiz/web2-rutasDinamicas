@@ -1,23 +1,35 @@
-node {
-    stage('Checkout') {
-        checkout scm
-    }
+pipeline {
+    agent any
 
-    stage('Instalar Dependencias') {
-         'npm install'
-    }
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
 
-    stage('Construir') {
-         'npm run build'
-    }
+        stage('Instalar Dependencias') {
+            steps {
+                bat 'npm install'
+            }
+        }
 
-   stage('Enviar Correo Electrónico') {
-    script {
-        // Ruta al script Python
-        def scriptPath = "send_email.py"
+        stage('Construir') {
+            steps {
+                bat 'npm run build'
+            }
+        }
 
-        // Ejecutar el script Python
-         "python ${scriptPath}"
+        stage('Enviar Correo Electrónico') {
+            steps {
+                script {
+                    def scriptPath = "send_email.py"
+                    def cmd = "python ${scriptPath}"
+
+                    // Ejecutar el script Python
+                    bat returnStatus: true, script: cmd
+                }
+            }
+        }
     }
-}
 }
