@@ -4,15 +4,17 @@ node {
     }
 
     stage('Instalar Dependencias') {
-        bat 'npm install'
+         'npm install'
     }
 
     stage('Construir') {
-        bat 'npm run build'
+         'npm run build'
     }
 
-    stage('Enviar Correo') {
-        bat 'python send_email.py'
+    stage('Enviar Correo Electrónico') {
+        script {
+            // Agrega el comando para ejecutar tu script de Python aquí
+           'python script.py'
+        }
     }
 }
-
