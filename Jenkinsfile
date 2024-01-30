@@ -11,10 +11,8 @@ node {
         bat 'npm run build'
     }
 
-    stage('Enviar Correo Electrónico') {
-        script {
-            // Ejecutar el script de Python 
-            bat 'python script.py'
-        }
+    stage('Enviar Correo') {
+        bat 'python send_email.py'
     }
 }
+
