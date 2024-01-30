@@ -1,4 +1,4 @@
-import smtplib
+uaimport smtplib
 from email.mime.text import MIMEText
 
 def send_email(subject, body, to_email):
@@ -19,4 +19,4 @@ def send_email(subject, body, to_email):
         server.sendmail(from_email, to_email, message.as_string())
 
 # Ejemplo de uso
-send_email("Prueba de Jenkins", "Este es un correo de prueba enviado desde Jenkins.", "destinatario@example.com")
+send_email("Prueba de Jenkins", "Este es un correo de prueba con script python.", "ecuaplush010@gmail.com")
