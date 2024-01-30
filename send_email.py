@@ -3,7 +3,7 @@ from email.mime.text import MIMEText
 
 def send_email(subject, body, to_email):
     from_email = "ecuaplush20244@gmail.com"
-    app_password = "zpbk hakh swel ehyg"
+    app_password = "zpbk hakh swel ehyg"  # Reemplaza con tu contraseña de aplicación
 
     message = MIMEText(body)
     message["Subject"] = subject
@@ -19,5 +19,5 @@ def send_email(subject, body, to_email):
     except Exception as e:
         print(f"Error al enviar el correo: {e}")
 
-# Cambia la dirección de correo electrónico de destino según tus necesidades
-send_email("Prueba de Jenkins", "Este es un correo de prueba con script python.", "ecuaplush2025@yopmail.com")
+# Ejemplo de uso
+send_email("Prueba de Jenkins", "Este es un correo de prueba con script python.", "ecuaplush010@gmail.com")
