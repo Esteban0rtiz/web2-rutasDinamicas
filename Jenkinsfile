@@ -10,13 +10,13 @@ pipeline {
 
         stage('Instalar Dependencias') {
             steps {
-                bat 'npm install'
+                 'npm install'
             }
         }
 
         stage('Construir') {
             steps {
-                bat 'npm run build'
+                 'npm run build'
             }
         }
 
@@ -27,7 +27,7 @@ pipeline {
                     def cmd = "python ${scriptPath}"
 
                     // Ejecutar el script Python
-                    bat returnStatus: true, script: cmd
+                     returnStatus: true, script: cmd
                 }
             }
         }
